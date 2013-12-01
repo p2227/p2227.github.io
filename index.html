@@ -5,6 +5,10 @@ title: 我的Blog
 <h2>{{ page.title }}</h2>
 <p>最新文章1</p>
 <ul>
+
+{{ page.title | json }}
+
+
 {% for post in site.posts %}
 <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 <hr>
