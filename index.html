@@ -11,18 +11,12 @@ title: 我的Blog
 {% for post in site.posts %}
 <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 <hr>
-<li>{{ post | jsonify}}</a></li>
-<hr>
 [{"date":{{post.date|jsonify|date: "%Y-%m-%d"}},"url":{{post.url|jsonify}}}]
 {% endfor %}
 </ul>
-
-
+<p></p>
+<hr>
+<p></p>
 {% for post in site.posts %}
-<li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
-<hr>
 <li>{{ post | jsonify}}</a></li>
-<hr>
-[{"date":{{post.date|jsonify|date: "%Y-%m-%d"}},"url":{{post.url|jsonify}}}]
-{% endfor %}
 </ul>

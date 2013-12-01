@@ -1,0 +1,4 @@
+---
+layout: json
+---
+{{ site.posts | json }}
