@@ -13,5 +13,15 @@ title: 我的Blog
 <hr>
 
 <ul>
-{%  site.posts | jsonify %}
+{% for post in site.posts %}
+<li>{{ post | jsonify}}</a></li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<ul>
+{% for post in site.posts %}
+[{"date":{{post.date|jsonify|date: "%Y-%m-%d"}},"url":"{{post.url|jsonify}}"]
+{% endfor %}
 </ul>
