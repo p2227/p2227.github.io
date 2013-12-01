@@ -22,6 +22,6 @@ title: 我的Blog
 
 <ul>
 {% for post in site.posts %}
-[{"date":{{post.date|jsonify|date: "%Y-%m-%d"}},"url":"{{post.url|jsonify}}"]
+[{"date":{{post.date|jsonify|date: "%Y-%m-%d"}},"url":"{{post.url|jsonify}}"}]
 {% endfor %}
 </ul>
