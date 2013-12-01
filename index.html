@@ -9,3 +9,9 @@ title: 我的Blog
 <li>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+
+<hr>
+
+<ul>
+{%  site.posts | jsonify %}
+</ul>
