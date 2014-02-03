@@ -1,0 +1,10 @@
+---
+layout: default
+title: 我的Blog
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章234</p>
+<ul>
+{% for post in site.posts %}
+<li>{{ post | json}}</a></li>
+</ul>
