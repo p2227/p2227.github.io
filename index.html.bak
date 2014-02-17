@@ -7,4 +7,5 @@ title: 我的Blog
 <ul>
 {% for post in site.posts %}
 <li>{{ post | json}}</a></li>
+{% endfor %}
 </ul>
