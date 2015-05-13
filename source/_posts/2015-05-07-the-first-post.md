@@ -8,5 +8,3 @@ footer: true
 * this is my first post
 * i had test it
 * it works
-
-{%  %}
