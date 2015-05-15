@@ -1,7 +1,15 @@
-$base03:          #002b36 !default; //darkest blue
-$base02:          #073642 !default; //dark blue
-$base01:          #586e75 !default; //darkest gray
 $base00:          #657b83 !default; //dark gray
+$base01:          #586e75 !default; //darkest gray
+$base02:          #073642 !default; //dark blue
+$base03:          #002b36 !default; //darkest blue
+$base04:          #191919 !default; //black
+$base05:          #181818 !default; //black
+$base06:          #999 !default; //black
+$base07:          #000 !default; //black
+$base08:          #E6E6E6 !default; //white
+$base09:          #fcfcfc !default; //white
+$base10:          #F8F8F8 !default; //white
+$base11:          #93BEFF !default; //selection
 $base0:           #839496 !default; //medium gray
 $base1:           #93a1a1 !default; //medium light gray
 $base2:           #eee8d5 !default; //cream
@@ -19,19 +27,20 @@ $solarized: dark !default;
 
 @if $solarized == light {
 
-  $_base03: $base03;
-  $_base02: $base02;
-  $_base01: $base01;
   $_base00: $base00;
+  $_base01: $base01;
+  $_base02: $base02;
+  $_base03: $base03;
+  $_base11: $base11;
   $_base0:  $base0;
   $_base1:  $base1;
   $_base2:  $base2;
   $_base3:  $base3;
-
-  $base03:  $_base3;
-  $base02:  $_base2;
-  $base01:  $_base1;
   $base00:  $_base0;
+  $base01:  $_base1;
+  $base02:  $_base2;
+  $base03:  $_base3;
+  $base11:  $_base11;
   $base0:   $_base00;
   $base1:   $_base01;
   $base2:   $_base02;
@@ -42,5 +51,3 @@ $solarized: dark !default;
 $pre-bg: $base03 !default;
 $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
-
-

@@ -1,11 +1,26 @@
 <div class="sharing">
-  {% if site.twitter_tweet_button %}
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
-  {% endif %}
-  {% if site.google_plus_one %}
-  <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
-  {% endif %}
-  {% if site.facebook_like %}
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  {% endif %}
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><span class="hatena-name">{% if site.share_button_hatena %}<span class="icon-hatena"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+>B!</span>{% endif %} Bookmark</span></a>
+  <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=psp_t" target="_blank"><span class="twitter-name">{% if site.share_button_twitter %}<span class="icon-twitter"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} Tweet</span></a>
+  <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank"><span class="googleplus-name">{% if site.share_button_gplus %}<span class="icon-googleplus"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} +1</span></a>
+  <a href="http://feedly.com/i/subscription/feed/{{ site.url }}{{ site.subscribe_rss }}" target="_blank"><span class="feedly-name">{% if site.share_button_rss %}<span class="icon-feed"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} Feedly</span></a>
 </div>

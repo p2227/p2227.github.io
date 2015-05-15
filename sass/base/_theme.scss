@@ -22,7 +22,7 @@ $text-color-light: #aaa !default;
 $type-border: #ddd !default;
 
 /* Navigation */
-$nav-bg: #ccc !default;
+$nav-bg: #f8f8f8 !default;
 $nav-bg-front: image-url('noise.png') !default;
 $nav-bg-back: linear-gradient(lighten($nav-bg, 8), $nav-bg, darken($nav-bg, 11)) !default;
 $nav-color: darken($nav-bg, 38) !default;
@@ -36,7 +36,7 @@ $nav-border-right: lighten($nav-bg, 7) !default;
 
 /* Sidebar colors */
 $sidebar-bg: #f2f2f2 !default;
-$sidebar-link-color: $text-color !default;
+$sidebar-link-color: $link-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
 $sidebar-color: change-color(mix($text-color, $sidebar-bg, 80), $hue: hue($sidebar-bg), $saturation: saturation($sidebar-bg)/2) !default;
@@ -60,26 +60,24 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 
 /* Core theme application */
 
-a {
-  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
-}
-aside.sidebar a {
-  @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
-}
-a {
-  @include transition(color .3s);
+/* from whiterspace */
+.flex-content { max-width: 100%; height: auto; }
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
 }
 
-html {
-  background: $page-bg image-url('line-tile.png') top left;
+.text-uppercase {
+    text-transform: uppercase;
 }
-body {
-  > div {
-    background: $sidebar-bg $noise-bg;
-    border-bottom: 1px solid $page-border-bottom;
-    > div {
-      background: $main-bg $noise-bg;
-      border-right: 1px solid $sidebar-border;
-    }
-  }
+
+.page-content {
+    margin-top: 0px; 
+    margin-bottom: 32px;
+}
+
+div.entry-content.tocfix > p {
+  display:none;
 }

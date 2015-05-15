@@ -3,7 +3,7 @@
 }
 #blog-archives {
   article {
-    padding: 1em 0 1em;
+    padding: 0;
     position: relative;
     background: $img-border bottom left repeat-x;
     &:last-child {
@@ -13,8 +13,10 @@
   }
   h1 { color: $text-color; margin-bottom: .3em; }
   h2 { display: none; }
-  h1 {
+  h3 {
     font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0;
     a {
       @include hover-link;
       color: inherit;
@@ -23,7 +25,26 @@
       display: inline-block;
     }
   }
-  a.category, time {
+  h1 {
+    margin-top: 5px;
+    a {
+      @include hover-link;
+      color: inherit;
+      &:hover { color: $link-color-hover; }
+      font-weight: normal;
+      display: inline-block;
+    }
+  }
+  a.category, a.tag
+  {
+    @extend .sans;
+    color: #fff;
+  }
+  a.category:hover, a.tag:hover {
+    color: #fff;
+  }
+
+  time {
     @extend .sans;
     color: $text-color-light;
   }
@@ -31,7 +52,7 @@
   .entry-content { display: none; }
   time {
     font-size: .9em;
-    line-height: 1.2em;
+    line-height: 1.5em;
     .month, .day { display: inline-block; }
     .month { text-transform: uppercase; }
   }
@@ -39,7 +60,7 @@
   &, .entry-content { a { @include link-colors(inherit, $link-color-hover); }}
   a:hover { color: $link-color-hover; }
   @media only screen and (min-width: 550px) {
-    article { margin-left: 5em; }
+    article { margin-left: 1em; }
     h2 {
       margin-bottom: .3em;
       font-weight: normal;
@@ -52,21 +73,25 @@
       position: absolute;
       text-align: right;
       left: 0em;
-      top: 1.8em;
+      top: 0em;
     }
     .year { display: none; }
     article {
       padding:{left: 4.5em; bottom: .7em;}
     }
-  a.category {
-    line-height: 1.1em;
+    a.category, a.tag  {
+      line-height: 1.5em;
     }
   }
 }
-#content > .category {
+#content > .category, .tag {
   article {
     margin-left: 0;
     padding-left: 6.8em;
   }
   .year { display: inline; }
+}
+
+div.panel-tag-cloud {
+  padding: 10px 15px;
 }

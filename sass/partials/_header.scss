@@ -1,18 +1,265 @@
-body > header {
-  background: $header-bg;
-  h1 {
-    display: inline-block;
-    margin: 0;
-    a, a:visited, a:hover {
-      color: $title_color;
-      text-decoration: none;
-    }
+header[role=banner] {
+  /* fix email / rss icon for bootstrap navbar */
+  .navbar-default .navbar-nav > li img {
+    height: 23px;
+    margin: 0px;
   }
-  h2 {
-    margin: .2em 0 0;
-    @extend .sans;
-    font-size: 1em;
-    color: $subtitle-color;
-    font-weight: normal;
+  .navbar-default .navbar-nav>li.active img {
+    height: 23px;
+    max-width: none;
+    margin: 0px;
   }
+}
+
+.navbar {
+  margin-bottom: 40px;
+  min-height: 55px;
+  //border-bottom: solid 3px #e7e7e7;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #990000;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  .icon-phoenix-logo:hover{
+    font-size: 26px;
+    color: #990000;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+  }
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #428bca;
+  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  .icon-phoenix-logo:hover{
+    font-size: 26px;
+    color: #428bca;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+  }
+}
+
+.navbar-default .navbar-nav>.active>a {
+  height: 53px;
+  color: #428bca;
+  border-bottom: solid 4px #428bca;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  //animation
+  background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -weblit-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -moz-linear-gradient(to bottom, #f8f8f8 90%,#428bca 100%);
+  background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+
+  animation: Rotate 0.7s ease-out;
+  -webkit-animation: Rotate 0.7s ease-out;
+  -moz-animation: Rotate 0.7s ease-out;
+  -ms-animation: Rotate 0.7s ease-out;
+  -o-animation: Rotate 0.7s ease-out;
+
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  -ms-animation-fill-mode:forwards;
+  -o-animation-fill-mode:forwards;
+}
+
+
+@-ms-keyframes Rotate { 100% { background-image: linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 10%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); } 90% { background-image: linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 20%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); } 80% { background-image: linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 30%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); } 70% { background-image: linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 40%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); } 60% { background-image: linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 50%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); } 50% { background-image: linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 60%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); } 40% { background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 70%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); } 0% { background-image: linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 71%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); } }
+
+@-o-keyframes Rotate { 100% { background-image: linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 10%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); } 90% { background-image: linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 20%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); } 80% { background-image: linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 30%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); } 70% { background-image: linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 40%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); } 60% { background-image: linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 50%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); } 50% { background-image: linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 60%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); } 40% { background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 70%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); } 0% { background-image: linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 71%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); } }
+
+
+@-moz-keyframes Rotate { 100% { background-image: linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 10%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); } 90% { background-image: linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 20%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); } 80% { background-image: linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 30%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); } 70% { background-image: linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 40%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); } 60% { background-image: linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 50%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); } 50% { background-image: linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 60%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); } 40% { background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 70%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); } 0% { background-image: linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 71%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); } }
+
+@keyframes Rotate { 100% { background-image: linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 10%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%); } 90% { background-image: linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 20%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%); } 80% { background-image: linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 30%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%); } 70% { background-image: linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 40%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%); } 60% { background-image: linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 50%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%); } 50% { background-image: linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 60%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%); } 40% { background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 70%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%); } 0% { background-image: linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -moz-linear-gradient(to bottom, #f8f8f8 71%,#428bca 100%); background-image: -ms-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); background-image: -o-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%); } }
+
+@-webkit-keyframes Rotate {
+  100% {
+    background-image: linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 10%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 10%,#428bca 400%);
+  }
+
+  90% {
+    background-image: linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 20%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 20%,#428bca 400%);
+  }
+
+  80% {
+    background-image: linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 30%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 30%,#428bca 400%);
+  }
+
+  70% {
+    background-image: linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 40%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 40%,#428bca 400%);
+  }
+
+  60% {
+    background-image: linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 50%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 50%,#428bca 400%);
+  }
+
+  50% {
+    background-image: linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 60%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 60%,#428bca 400%);
+  }
+
+  40% {
+    background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 70%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  }
+
+  0% {
+    background-image: linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%);
+    background-image: -moz-linear-gradient(to bottom, #f8f8f8 71%,#428bca 100%);
+    background-image: -ms-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%);
+    background-image: -o-linear-gradient(to bottom, #f8f8f8 71%,#428bca 400%);
+  }
+}
+
+.navbar-nav>li {
+  min-height: 53px;
+}
+
+.navbar-nav > li:hover {
+  max-height: 53px;
+  border-bottom: solid 4px #428bca;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  //background-image: -webkit-linear-gradient(top,#428bca 0,#428bca 100%);
+  //background-image: linear-gradient(to bottom,#428bca 0,#428bca 100%);
+}
+
+.navbar-default .navbar-brand {
+  color: #428bca;
+}
+
+
+.navbar-brand {
+  padding: 17px 15px 15px 15px;
+}
+
+.navbar-nav > .active:hover {
+  max-height: 50px;
+  opacity: 0.9;
+  border-bottom: solid 4px #428bca;
+  //background-image: -webkit-linear-gradient(top,#428bca 0,#428bca 100%);
+  //background-image: linear-gradient(to bottom,#428bca 0,#428bca 100%);
+}
+
+.navbar-default {
+  background-image: none;
+  background-repeat: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-nav > li > a {
+  //line-height: 20px;
+  height: 53px;
+  //padding: 16px 15px 0 15px;
+}
+
+.dropdown-menu {
+  top: 54px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.dropdown-menu>li>a {
+  padding: 6px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu>li>a:hover {
+  border-bottom: 1px solid #428bca;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #eee;
+}
+
+li.dropdown.open {
+  background-color: #e7e7e7;
+}
+
+a.subscribe-rss:hover{
+  //animation
+  //opacity: 0.7;
+  border-bottom: solid 4px #428bca;
+  background-image: linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -webkit-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -moz-linear-gradient(to bottom, #f8f8f8 90%,#428bca 100%);
+  background-image: -ms-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  background-image: -o-linear-gradient(to bottom, #f8f8f8 70%,#428bca 400%);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-animation: Rotate 0.7s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation: Rotate 0.7s ease-out;
+  -moz-animation-iteration-count: 1;
+  -ms-animation: Rotate 0.7s ease-out;
+  -ms-animation-iteration-count: 1;
+  -o-animation: Rotate 0.7s ease-out;
+  -o-animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  -ms-animation-fill-mode:forwards;
+  -o-animation-fill-mode:forwards;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+  display: block;
+}
+a.menu:after, .dropdown-toggle:after {
+  content: none;
 }

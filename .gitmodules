@@ -1,0 +1,3 @@
+[submodule ".themes/octoair"]
+	path = .themes/octoair
+	url = https://github.com/p2227/syui.github.io.git

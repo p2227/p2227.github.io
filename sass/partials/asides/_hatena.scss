@@ -1,0 +1,52 @@
+.hatena-bookmark-widget {
+  padding: 10px !important;
+  border:  solid 1px #ddd !important;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+.hatena-bookmark-widget ul li {
+  border-bottom:  solid 1px #ddd !important;
+}
+
+.hatena-bookmark-widget ul li > a{
+  color: #428bca !important;
+}
+
+.hatena-bookmark-widget-body ul {
+  border: none !important;
+  background-color: transparent !important;
+  padding: 10px 10px 0px 10px;
+}
+
+.hatena-bookmark-widget-title {
+  display:none;
+}
+
+.hatena-bookmark-widget-footer {
+  //display:none;
+  background: none !important;
+  border: none !important;
+}
+
+.hatena-bookmark-widget-footer a span {
+  content: "Hatena::Bookmark" !important;
+  font-family:'Verdana';
+  font-weight:100;
+  background: none !important;
+  text-indent: 0em !important;
+  text-decoration: none !important;
+}
+
+.hatena-bookmark-widget-footer a{
+  background: none !important;
+  border: none !important;
+}
+
+.hatena-bookmark-widget a:visited {
+  color: #428bca !important;
+}
+
+.hatena-bookmark-widget a {
+  color: #428bca !important;
+}

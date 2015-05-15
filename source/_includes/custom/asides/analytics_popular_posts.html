@@ -1,0 +1,10 @@
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">Popular Posts</div>
+  </div>
+  <div id="recent_posts" class="list-group">
+    {% for post in site.popular_posts limit: 10 %}
+    <a class="list-group-item {% if post.url == page.url %}active{% endif %}" href="{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
+    {% endfor %}
+  </div>
+</section>

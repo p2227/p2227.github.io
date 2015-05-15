@@ -1,0 +1,127 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+//font
+span.entypo-twitter {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #999999;
+}
+
+span.entypo-gplus {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #999999;
+}
+
+span.entypo-vkontakte {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #999999;
+  word-break: break-all;
+}
+
+span.entypo-rss {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #999999;
+}
+
+//link
+a:hover {
+  text-decoration: none;
+}
+
+span.entypo-twitter:hover {
+  transition: all 0.3s;
+  color: #66CCFF;
+}
+span.twitter-name:hover {
+  opacity: 0.6;
+}
+
+span.entypo-gplus:hover {
+  transition: all 0.3s;
+  color: #CC3300;
+}
+span.googleplus-name:hover {
+  opacity: 0.6;
+}
+
+span.entypo-vkontakte:hover {
+  transition: all 0.3s;
+  color: #3366CC;
+}
+span.hatena-name:hover {
+  opacity: 0.6;
+}
+
+span.entypo-rss:hover {
+  transition: all 0.3s;
+  color: #66FF33;
+  //color: #FF9933;
+}
+span.feedly-name:hover {
+  opacity: 0.6;
+}
+
+//title
+span.twitter-name {
+  font-size: 15px;
+  text-align:center;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #66CCFF;
+  line-height:50px;
+  word-break: break-all;
+}
+
+
+
+span.googleplus-name {
+  font-size: 15px;
+  text-align:center;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #CC3300;;
+  line-height:50px;
+  word-break: break-all;
+}
+
+span.hatena-name {
+  font-size: 15px;
+  text-align:center;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #3366CC;
+  line-height:50px;
+  word-break: break-all;
+}
+
+span.feedly-name {
+  font-size: 15px;
+  text-align:center;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0px;
+  background-color: #66FF33;
+  line-height:50px;
+  word-break: break-all;
+}
+
+

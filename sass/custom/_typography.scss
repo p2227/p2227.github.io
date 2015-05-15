@@ -1,0 +1,100 @@
+h1, h2, h3 {
+    margin-top: 3em;
+}
+
+h2, h3 {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+.entry-content {
+    font-size: 18px;
+    @media only screen and (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+q {
+    font-style: italic;
+    &:before {
+        content: "\201C";
+    }
+    &:after {
+        content: "\201D";
+    }
+}
+
+// Here you can easily change font faces which are used in your site.
+// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works. your sites's.
+// If you love to use Web Fonts, you also need to add some lines to source/_includes/custom/head.html
+//
+
+//h2 {
+//  background-color: #428bca;
+//  color:#fff;
+//  font-size: 21px;
+//  position:relative;
+//  margin-bottom:20px;
+//  padding:11px 20px 11px 20px;
+//}
+//
+//h2:before {
+//  content:"";
+//  position:absolute;
+//  width:0px;
+//  height:0px;
+//  top:100%;
+//  left:30px;
+//  border-style:solid;
+//  border-width:20px 20px 0px 3px;
+//  color:#ffffff;
+//  border-color: #428bca rgba(192,192,192,0);
+//}
+//
+//h2 a{
+//color:#fff;
+//}
+//
+//h2 a:link {
+//color:#fff;
+//}
+
+//h3 {
+//  color:#000000;
+//  font-size: 20px;
+//  border-bottom: 3px solid #428bca;
+//  padding: 10px 20px 10px;
+//  margin-bottom:20px;
+//}
+
+h2 {
+  text-align: center;
+  margin:3em 0 30px 0;
+  font-size: 23px;
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+h2:before, h2:after{
+margin:10px;
+display: block;
+content: '';
+height: 3px;
+background-image: -webkit-linear-gradient(left, #fff, #428bca, #fff);
+background-image: -moz-linear-gradient(left, #fff, #428bca, #fff);
+background-image: -ms-linear-gradient(left, #fff, #428bca, #fff);
+background-image: -o-linear-gradient(left, #fff, #428bca, #fff);
+}
+
+h4 {
+  padding: 5px 20px 3px;
+  font-size: 19px;
+  border-left: 3px solid #428bca;
+  margin-bottom:20px;
+}
+

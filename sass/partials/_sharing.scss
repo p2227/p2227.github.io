@@ -1,8 +1,74 @@
 .sharing {
-  p.meta + & {
-    padding: { top: 1em; left: 0; }
-    background: $img-border top left repeat-x;
+  margin-bottom:20px;
+  ul li {
+    display: block;
+    float: left;
+    margin-right: 5px;
   }
 }
 
+li.hatebu {
+  width: 60px;
+}
+li.twitter {
+  width: 80px;
+}
+li.googleplus {
+  width: 65px;
+}
+li.facebook {
+  width: 100px;
+}
+li.facebook_share {
+  width: 100px;
+  margin-top: -5px;
+}
 #fb-root { display: none; }
+li.pocket {
+  width: 90px;
+}
+li.bookmark {
+  width: 100px;
+  margin-top: -4px;
+}
+
+li.tumblr {
+  width: 60px;
+}
+
+.sharing a.tumblr_button {
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  height:20px;
+  //background:url('http://platform.tumblr.com/v1/share_1.png') top left no-repeat transparent; withd: 81px;
+  //background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent; width: 61px;
+  background:url('http://platform.tumblr.com/v1/share_2T.png') top left no-repeat transparent; width: 61px;
+}
+
+.link_btn {
+  background-color: $nav-bg;
+  padding: 2px 5px 0px;
+  position: relative;
+  text-decoration: none;
+  border: solid 2px darken($nav-bg, 15);
+  border-radius: 10px;
+  &:active {
+    padding: 3px 5px 1px;
+    top: 1px;
+  }
+  &::before {
+    background-color: $nav-bg;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    left: -1px;
+    top: -1px;
+    z-index: -1;
+    border-radius: 10px;
+  }
+}
+

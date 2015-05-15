@@ -1,45 +1,71 @@
-.highlight, html .gist .gist-file .gist-syntax .gist-highlight {
-  table td.code { width: 100%; }
-  border: 1px solid $pre-border !important;
+.gist-file table.highlight {
+  width: 100%;
 }
-.highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers {
+
+table {
+  width: 100%;
+}
+
+.highlight {
+  table td.code { width: 100%; }
+  //border: 1px solid $pre-border !important;
+  @include border-radius(5px);
+}
+figcaption + .highlight {
+  @include border-top-radius(0);
+}
+
+.highlight .line-numbers, .gist-file .line-numbers {
+  // XXX
+  //display: none;
   text-align: right;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45em;
+  font-weight: 100;
   @if $solarized == light {
-    background: lighten($base03, 1) $noise-bg !important;
-    border-right: 1px solid darken($base02, 2) !important;
+    background: lighten($base05, 1) $noise-bg !important;
+    border-right: 1px solid darken($base07, 2) !important;
     @include box-shadow(lighten($base03, 2) -1px 0 inset);
-    text-shadow: lighten($base02, 2) 0 -1px;
+    //text-shadow: lighten($base02, 2) 0 -1px;
   } @else {
     background: $base02 $noise-bg !important;
-    border-right: 1px solid darken($base03, 2) !important;
-    @include box-shadow(lighten($base02, 2) -1px 0 inset);
-    text-shadow: darken($base02, 10) 0 -1px;
+    border-right: 1px solid darken($base05, 2) !important;
+    @include box-shadow(lighten($base07, 2) -1px 0 inset);
+    //text-shadow: darken($base02, 10) 0 -1px;
   }
-  span { color: $base01 !important; }
-  padding: .8em !important;
+  span { color: $base08 !important; }
+  padding: 1.0em !important;
+  //padding: .8em !important;
   @include border-radius(0);
 }
 
-figure.code, .gist-file, pre {
+figure.code, .gist, pre {
+  font-size: 16px;
   @include box-shadow(rgba(#000, .06) 0 0 10px);
   .highlight pre { @include box-shadow(none); }
 }
 
 .gist .highlight, figure.code .highlight {
-  @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
+  @if $solarized == light {
+    @include selection(adjust-color($base3, $lightness: 23%, $saturation: -65%), $text-shadow: $base00 0 0px);
+  } @else {
+    @include selection(adjust-color($base3, $lightness: 23%, $saturation: -65%), $text-shadow: $base06 0 0px);
+  }
+
+  //span.line:hover {
+    //  background: #386774;
+  //}
 }
+
 html .gist .gist-file {
-  margin-bottom: 1.8em;
+  margin-bottom: 0;
   position: relative;
   border: none;
-  padding-top: image-height("code_bg.png") !important;
+  padding-top: 2.5em !important;
   .highlight {
     margin-bottom: 0;
   }
   .gist-syntax {
-    border-bottom: 0 !important;
     background: none !important;
     .gist-highlight {
       background: $base03 !important;
@@ -50,71 +76,49 @@ html .gist .gist-file {
     }
   }
   .gist-meta {
-   padding: .6em 0.8em;
-   border: 1px solid lighten($base02, 2) !important;
-   color: $base01;
-   font-size: .7em !important;
-   @if $solarized == light {
-     background: lighten($base03, 2) $noise-bg;
-     border: 1px solid $pre-border !important;
-     border-top: 1px solid lighten($base03, 2) !important;
-   } @else {
-     background: $base02 $noise-bg;
-   }
-   @extend .sans;
-   line-height: 1.5em;
+    padding: .6em 0.8em;
+    //border: 1px solid lighten($base02, 2) !important;
+    color: $base01;
+    font-size: .7em !important;
+    background: transparent;
+    // @if $solarized == light {
+      //   background: lighten($base03, 2) $noise-bg;
+      //   //border: 1px solid $pre-border !important;
+      //   //border-top: 1px solid lighten($base03, 2) !important;
+    // } @else {
+      //   background: $base02 $noise-bg;
+    // }
+    @extend .sans;
+    line-height: 1.5em;
     a {
       color: mix($base1, $base01) !important;
       @include hover-link;
       &:hover { color: $base1 !important; }
     }
     a[href*='#file'] {
-      position: absolute; top: 0; left:0; right:-10px;
+      top: 0.75em;
+      left: 0.5em;
+      position: absolute;
+      //right:-10px;
       color: #474747 !important;
-      @extend .code-title;
+      //@extend .code-title;
       &:hover { color: $link-color !important; }
     }
     a[href*=raw]{
-      @extend .download-source;
-      top: .4em;
+      top: 0.75em;
+      position: absolute; right: .8em;
+      @include hover-link;
+      //color: #666 !important;
+      z-index: 1;
+      font-size: 16px;
+      //text-shadow: #cbcccc 0 1px 0;
+      padding-left: 3em;
     }
   }
 }
-pre {
-  background: $pre-bg $noise-bg;
-  @include border-radius(.4em);
-  @extend .mono;
-  border: 1px solid $pre-border;
-  line-height: 1.45em;
-  font-size: 13px;
-  margin-bottom: 2.1em;
-  padding: .8em 1em;
-  color: $pre-color;
-  overflow: auto;
-}
-h3.filename {
-  @extend .code-title;
-  + pre { @include border-top-radius(0px); }
-}
-
-p, li {
-  code {
-    @extend .mono;
-    display: inline-block;
-    white-space: no-wrap;
-    background: #fff;
-    font-size: .8em;
-    line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
-    margin: -1px 0;
-  }
-  pre code { font-size: 1em !important; background: none; border: none; }
-}
 
 .pre-code {
+  white-space: pre;
   font-family: $mono !important;
   overflow: scroll;
   overflow-y: hidden;
@@ -122,21 +126,21 @@ p, li {
   padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  background: $base03 $noise-bg !important;
-  color: $base1 !important;
-  span { color: $base1 !important; }
+  background: $base04 $noise-bg !important;
+  color: $base09 !important;
+  span { color: $base08 !important; }
   span { font-style: normal !important; font-weight: normal !important; }
 
   .c      { color: $base01 !important; font-style: italic !important; }                     /* Comment */
   .cm     { color: $base01 !important; font-style: italic !important; }                     /* Comment.Multiline */
   .cp     { color: $base01 !important; font-style: italic !important;  }                     /* Comment.Preproc */
   .c1     { color: $base01 !important; font-style: italic !important; }                     /* Comment.Single */
-  .cs     { color: $base01 !important; font-weight: bold !important; font-style: italic !important; }   /* Comment.Special */
+  .cs     { color: $base01 !important; font-weight: 100 !important; font-style: italic !important; }   /* Comment.Special */
   .err    { color: $solar-red !important; background: none !important; }                                            /* Error */
   .k      { color: $solar-orange !important; }                       /* Keyword */
-  .o      { color: $base1 !important; font-weight: bold !important; }                       /* Operator */
+  .o      { color: $base1 !important; font-weight: 100 !important; }                       /* Operator */
   .p      { color: $base1 !important; }                                             /* Operator */
-  .ow     { color: $solar-cyan !important; font-weight: bold !important; }                       /* Operator.Word */
+  .ow     { color: $solar-cyan !important; font-weight: 100 !important; }                       /* Operator.Word */
   .gd     { color: $base1 !important; background-color: mix($solar-red, $base03, 25%) !important; display: inline-block; }               /* Generic.Deleted */
   .gd .x  { color: $base1 !important; background-color: mix($solar-red, $base03, 35%) !important; display: inline-block; }               /* Generic.Deleted.Specific */
   .ge     { color: $base1 !important; font-style: italic !important; }                      /* Generic.Emph */
@@ -146,13 +150,13 @@ p, li {
   .gi .x  { color: $base1 !important; background-color: mix($solar-green, $base03, 40%) !important; display: inline-block; }               /* Generic.Inserted.Specific */
   //.go     { color: #888888 }                                          /* Generic.Output */
   //.gp     { color: #555555 }                                          /* Generic.Prompt */
-  .gs     { color: $base1 !important; font-weight: bold !important; }                                       /* Generic.Strong */
+  .gs     { color: $base1 !important; font-weight: 100 !important; }                                       /* Generic.Strong */
   .gu     { color: $solar-violet !important; }                                          /* Generic.Subheading */
   //.gt     { color: #aa0000 }                                          /* Generic.Traceback */
-  .kc     { color: $solar-green !important; font-weight: bold !important; }                       /* Keyword.Constant */
+  .kc     { color: $solar-green !important; font-weight: 100 !important; }                       /* Keyword.Constant */
   .kd     { color: $solar-blue !important; }                       /* Keyword.Declaration */
-  .kp     { color: $solar-orange !important; font-weight: bold !important; }                       /* Keyword.Pseudo */
-  .kr     { color: $solar-magenta !important; font-weight: bold !important; }                       /* Keyword.Reserved */
+  .kp     { color: $solar-orange !important; font-weight: 100 !important; }                       /* Keyword.Pseudo */
+  .kr     { color: $solar-magenta !important; font-weight: 100 !important; }                       /* Keyword.Reserved */
   .kt     { color: $solar-cyan !important; }                       /* Keyword.Type */
   .n      { color: $solar-blue !important; }
   .na     { color: $solar-blue !important; }                                          /* Name.Attribute */
@@ -161,10 +165,10 @@ p, li {
   .no     { color: $solar-yellow !important; }                                          /* Name.Constant */
   //.ni     { color: #800080 }                                          /* Name.Entity */
   .nl     { color: $solar-green !important; }
-  .ne     { color: $solar-blue !important; font-weight: bold !important; }                       /* Name.Exception */
-  .nf     { color: $solar-blue !important; font-weight: bold !important; }                       /* Name.Function */
+  .ne     { color: $solar-blue !important; font-weight: 100 !important; }                       /* Name.Exception */
+  .nf     { color: $solar-blue !important; font-weight: 100 !important; }                       /* Name.Function */
   .nn     { color: $solar-yellow !important; }                                          /* Name.Namespace */
-  .nt     { color: $solar-blue !important; font-weight: bold !important; }                                          /* Name.Tag */
+  .nt     { color: $solar-blue !important; font-weight: 100 !important; }                                          /* Name.Tag */
   .nx     { color: $solar-yellow !Important; }
   //.bp     { color: #999999 }                                          /* Name.Builtin.Pseudo */
   //.vc     { color: #008080 }                                          /* Name.Variable.Class */
@@ -196,7 +200,7 @@ p, li {
 .highlight, .gist-highlight {
   pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
-  background: $base03;
+  background: $base04 $noise-bg;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -213,18 +217,18 @@ pre, .highlight, .gist-highlight {
   &::-webkit-scrollbar-thumb:horizontal { background: $solar-scroll-thumb;  -webkit-border-radius: 4px; border-radius: 4px }
 }
 
-.highlight code { 
+.highlight code {
   @extend .pre-code; background: #000;
 }
-figure.code {
+figure.code, .gist {
   background: none;
   padding: 0;
-  border: 0;
+  //border: 0;
   margin-bottom: 1.5em;
   pre { margin-bottom: 0; }
   figcaption {
     position: relative;
-    @extend .code-title;
+    //@extend .code-title;
     a { @extend .download-source; }
   }
   .highlight {
@@ -234,11 +238,10 @@ figure.code {
 
 .code-title {
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2em;
   text-shadow: #cbcccc 0 1px 0;
   color: #474747;
-  font-weight: normal;
   margin-bottom: 0;
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
@@ -251,11 +254,76 @@ figure.code {
 }
 
 .download-source {
+  top: 0.9em;
   position: absolute; right: .8em;
   @include hover-link;
-  color: #666 !important;
+  //color: #666 !important;
   z-index: 1;
-  font-size: 13px;
-  text-shadow: #cbcccc 0 1px 0;
+  font-size: 16px;
+  //text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
+}
+
+figure.code:not(.panel), .gist {
+  /* unpatched code_block or include_code plugin */
+  border: 1px solid #ddd;
+  @include border-radius(5px);
+  .highlight {
+    //border-top: 1px solid #ddd;
+    @include border-radius(5px);
+    @include border-top-radius(0);
+  }
+  figcaption {
+    padding: 10px 15px;
+  }
+  figcaption, .gist-file {
+    color: #333;
+    background-color: #f5f5f5;
+    @include border-radius(5px);
+    span, a[href*='#file'] {
+      font-size: 16px;
+      // line-height: 1.1;
+      //font-weight: 100;
+    }
+  }
+}
+
+
+code {
+  background-color: #F5F5F5;
+  border: 1px solid #DCDCDC;
+  font-size: 100%;
+  margin:3px;
+}
+
+pre code{
+  border:none;
+}
+
+.panel {
+  border-radius: 0px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-image: -webkit-linear-gradient(top,#428bca 0,#428bca 100%);
+  background-image: linear-gradient(to bottom,#428bca 0,#428bca 100%);
+  text-shadow: none;
+}
+
+.panel-default>.panel-heading {
+  background-image: none;
+  background-color: #f5f5f5;
+}
+
+.download-source, figure.code figcaption a, .gist figcaption a {
+  /* position: absolute; */
+  top: .5em;
+  padding-left: .5em;
+  position: static;
+}
+
+pre {
+  margin-bottom: 30px;
 }

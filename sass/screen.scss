@@ -1,10 +1,9 @@
 @import "compass";
-@include global-reset;
 
 @import "custom/colors";
-@import "custom/fonts";
-@import "custom/layout";
+@import "custom/typography";
 @import "base";
 @import "partials";
-@import "plugins/**/*";
+@import "custom/syntax";
 @import "custom/styles";
+@import "amazon-tag";

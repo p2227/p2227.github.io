@@ -1,52 +1,16 @@
+/* from whiterspace */
 article {
-  padding-top: 1em;
-  a { @extend .force-wrap; }
-  header {
-    position: relative;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    background: $img-border bottom left repeat-x;
-    h1 {
-      margin: 0;
-      a { text-decoration: none;
-        &:hover { text-decoration: underline; } }
-    }
-    p {
-      font-size: .9em;
-      color: $text-color-light;
-      margin: 0;
-      &.meta {
-        @extend .sans;
-        text-transform: uppercase;
-        position: absolute; top: 0;
-      }
-    }
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 1.5em;
-      padding-bottom: 1em;
-      background: $img-border bottom left repeat-x;
-    }
-  }
-  h2 {
-    padding-top: 0.8em;
-    background: $img-border top left repeat-x;
-  }
-  .entry-content & h2:first-child, header + h2 { padding-top: 0; }
-  h2:first-child, header + h2 { background: none; }
-  .feature {
-    padding-top: .5em;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
-    background: $img-border bottom left repeat-x;
-    font-size: 2.0em; font-style: italic;
-    line-height: 1.3em;
-  }
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;
-    @include shadow-box;
   }
+
+img:not(.no-border) {
+box-shadow:rgba(49, 127, 230, 0.54902) 0px 0px 3px 2px;
+-webkit-box-shadow:rgba(49, 127, 230, 0.54902) 0px 0px 3px 2px;
+-moz-box-shadow:rgba(49, 127, 230, 0.54902) 0px 0px 3px 2px;
+}
+
   video, .flash-video { margin: 0 auto 1.5em; }
   video { display: block; width: 100%; }
   .flash-video {
@@ -67,52 +31,12 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2.5em;
+    padding-bottom: 1em;
     margin-top: 2em;
-    @extend .sans;
     p.meta {
       margin-bottom: .8em;
-      font-size: .85em;
       clear: both;
-      overflow: hidden;
     }
-    .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
-      @extend .separator;
-    }
-  }
-
-}
-article + article {
-  .blog-index & {
-    background: $img-border top left repeat-x;
-  }
-}
-#content .blog-index {
-  padding: { top: 0; bottom: 0; }
-  article { padding-top: 2em; }
-  article header { background: none; padding-bottom: 0; }
-  article h1 {
-    font-size: 2.2em;
-    a { color: inherit; &:hover { color: $link-color-hover; } }
-  }
-  a[rel=full-article] {
-    background: darken($main-bg, 5);
-    display: inline-block;
-    padding: .4em .8em;
-    margin-right: .5em;
-    text-decoration: none;
-    color: mix($text-color, $text-color-light);
-    @extend .serif;
-    @include transition(background-color .5s);
-    &:hover {
-      background: $link-color-hover;
-      text-shadow: none;
-      color: $main-bg;
-    }
-  }
-  footer {
-    @extend .sans;
-    margin-top: 1em;
   }
 }
 
@@ -122,20 +46,136 @@ article + article {
   display: inline-block;
 }
 
-#content div.pagination {
-  text-align: center;
-  font-size: .95em;
-  position: relative;
-  background: $img-border top left repeat-x;
-  padding: {top: 1.5em; bottom: 1.5em;}
-  a {
-    text-decoration: none;
-    color: $text-color-light;
-    &.prev { position: absolute; left: 0; }
-    &.next { position: absolute; right: 0; }
-    &:hover { color: $link-color-hover; }
-    &[href*=archive] {
-      &:before, &:after { content: '\2014'; padding: 0 .3em; }
-    }
-  }
+/* syui */
+.page-header {
+ padding-bottom: 0px;
+ margin: 0;
+ border-bottom: 0px solid #eee;
+ }
+
+
+article>footer {
+padding-bottom: 24px;
+margin-top: 0em;
 }
+
+/* our own */
+.page-header {
+    p.meta {
+        margin-bottom: 0;
+        padding-left: 3px;
+    }
+    .entry-title {
+        margin-top: 10px;
+    }
+}
+
+/* bottom pager */
+.pager {
+    margin-top: 30px;
+}
+
+.meta.pager {
+    margin-top: 30px;
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #fff;
+  border: none;
+  margin: 0;
+}
+
+.pager li > a:hover {
+span.icon-phoenix:hover {
+  background-color: #fff;
+  color: #990000;
+  //color: #000;
+  transition: 0.7s;
+  //-webkit-border-radius: 25px;
+  //-moz-border-radius: 25px;
+  //border-radius: 25px;
+  //border: 1px solid #000;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+
+  /* box-shadow */
+  text-shadow: 0px 0px 7px rgba(60, 159, 255, 1);
+  -webkit-text-shadow: 0px 0px 7px rgba(60, 159, 255, 1);
+  -moz-text-shadow: 0px 0px 7px rgba(60, 159, 255, 1);
+  -ms-text-shadow: 0px 0px 7px rgba(60, 159, 255, 1);
+  -o-text-shadow: 0px 0px 7px rgba(60, 159, 255, 1);
+}
+  background-color: #fff;
+  color: #66CCFF;
+  transition: 0.7s;
+}
+
+footer[role=contentinfo] {
+border-top: solid 1px #ddd;
+margin-top: 40px;
+padding-top: 10px;
+}
+
+
+.category:hover, .tag:hover {
+    color: #ffffff;
+    background-color: #B2B2B2;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.category {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 4px;
+    padding: 4px 8px;
+    line-height: 3em;
+    background-color: #428bca;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.tag {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 4px;
+    padding: 4px 8px;
+    line-height: 3em;
+    background-color: #99CCFF;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.tag, .category {
+  line-height: 1.5em;
+  display: inline-block;
+}
+
+article.post:hover {
+  background-color: #BFDCF5;
+  //opacity: 0.8;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  /* border-radius */
+  border-radius:1px;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+
+  /* box-shadow */
+  box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
+  -webkit-box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
+  -moz-box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
+}
+

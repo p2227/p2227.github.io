@@ -1,0 +1,29 @@
+.amazon_tag {
+  padding: 10px;
+  border: 1px solid #E3E3E3;
+  overflow : hidden;
+  background-color: rgba(246, 246, 246, 0.5);
+  margin-bottom: 1em;
+
+  img {
+    width: 120px;
+    vertical-align: middle;
+    border: 0px none;
+    padding: 1px;
+    float: left
+  }
+
+  p {
+    line-height: 1.2;
+  }
+
+  .item_detail{
+    padding: 1em;
+    float: left;
+    margin-left: 5px;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

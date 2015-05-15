@@ -1,11 +1,15 @@
 {% if site.github_user %}
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <div class="panel-title">GitHub Repos</div>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating...</p>
+  </div>
   {% if site.github_show_profile_link %}
-  <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/{{site.github_user}}">{{site.github_user}}</a> on GitHub
+    </div>
   {% endif %}
   <script type="text/javascript">
     $(document).ready(function(){

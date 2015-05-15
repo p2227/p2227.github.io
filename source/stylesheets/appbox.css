@@ -1,0 +1,151 @@
+.star {
+  overflow: hidden;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAALAAAACgCF+qVAAAAAhUlEQVQI103NMQqCABgF4C+Fxg7QHDQ0JkFnaKqlKJBu4Np9hEDoBq2doCYP0B4UBKLYUKZvex+P/+9N/dJ3FXl9S9CopbF9U1pOkAgb3irVanOMlGqldeBoo9CmspMFOFmp/hzLmtuXzvrWvpwJFVJvLLqci8Qmzl8OhzBwcMdD6ilXfwAd9B9f78yTCQAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 11px 10px;
+}
+
+.unstar {
+  overflow: hidden;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAALAAAACgCF+qVAAAAAo0lEQVQI1z2NMQrCQBRE32YxGFDwBGJnYZkll0ilpDISLO28k4lFwN7CTsTKSisbK8ELCJFI/BZJdn41j/kzSqiVuZ3r1yzeAAanoajpcOwsW2dxf+0yWGe6CaVzNmgY4VHyQKAiVsIlUlvc9otK4lXugNnJjKqlkpi86X6exIZfNztZBGhKUgr4hBZ3A3UX4ye/CYdeWHch7MOzJ9R3jFLt8we7izGyoi32iQAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 11px 10px;
+ }
+.half-star {
+  overflow: hidden;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAQAAADI+WwIAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAJdnBBZwAAAAsAAAAKAIX6pUAAAACTSURBVAjXTY0xCsJAEEVfdiEgpPAWFpYTvMRWSioDwdIuh7GydbEIeAM7sU1lo42tR1CEdSzMJk4178H/H7qTVK4+A0URTNTMmZhVhEHXMK69/UEiS3Z0sOGOQqBMQAr2pABbgKDlujHQHlgQYpdWeRO7z/0Cj8swOcPyxvOEl/vXN/K2+kw5Zq4PipNR/E+Ft8IX7yMjsFUGo0cAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAAAAElFTkSuQmCC) no-repeat;
+  background-size: 11px 10px;
+}
+.rating {
+  width: 11px;
+  height: 10px;
+  display: inline-block;
+  background-size: 11px 10px
+}
+
+.appicon {
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin: 10px !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px
+}
+
+.appbox {
+  clear: both;
+  font-family: Arial;
+  border: 1px solid #E5E5E5;
+  background-color: #F9F9F9;
+  width: auto;
+  line-height: 1;
+  color: #545450;
+  margin: 16px 0;
+  font-size: 1em/16px;
+}
+
+.appdetails {
+  font-size: .95em;
+  margin: 10px;
+  height: 64px;
+}
+
+.apptitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+  font-size: 1.15em;
+  font-weight: bold;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.apptitle a {
+  color: #000 !important;
+}
+
+.apptitle a:hover {
+  text-decoration: none !important;
+  color: #B4B4B4 !important;
+}
+
+.developer {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 0;
+  height: 21px;
+  line-height: 21px;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+}
+
+.price {
+  height: 20px;
+  display: table-cell;
+  vertical-align: bottom;
+  padding: 0;
+  margin: 0;
+}
+
+.screenshots {
+  width: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.screenshots .slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 300px;
+  margin-top: 0;
+}
+
+.screenshots .slider ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-image: none;
+  white-space: nowrap;
+}
+
+.screenshots .slider ul li {
+  padding: 0;
+  margin: 0;
+  margin-right: 6px;
+  list-style-type: none;
+  display: inline;
+}
+
+.screenshots .slider ul li:last-child {
+  margin-right: 0;
+}
+
+.screenshots .slider ul li img {
+  height: 300px !important;
+  display: inline;
+}
+
+.appbutton {
+  height: 44px;
+  float: right;
+  margin: 10px;
+  display: inline-block;
+  background-color: #E5E5E5;
+  border: 1px solid #E5E5E5;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: .95em;
+  line-height: 1.6em;
+  text-align: center;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.appbutton:hover {
+  background-color: #C1C1C1;
+  color: #FFF;
+  text-decoration: none !important;
+}

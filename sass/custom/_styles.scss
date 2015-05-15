@@ -1,2 +1,90 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
+/* nice sticky footer, from http://getbootstrap.com/examples/sticky-footer/ */
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+footer[role=contentinfo] {
+  height: 60px;
+}
+
+.container2 {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 100;
+  color: #428bca;
+  background-color: #000000;
+}
+
+.container2 img:hover {
+  opacity: 0.4;
+  transition: 0.7s;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  opacity: none;
+}
+
+.btn:before, .btn:after{
+  display: block;
+  content: '';
+  height: 3px;
+  background-image: -webkit-linear-gradient(left, #fff, #428bca, #fff);
+  background-image: -moz-linear-gradient(left, #fff, #428bca, #fff);
+  background-image: -ms-linear-gradient(left, #fff, #428bca, #fff);
+  background-image: -o-linear-gradient(left, #fff, #428bca, #fff);
+}
+
+.btn:hover,
+.btn:focus {
+  transition: 0.7s;
+  background-color: #BFDCF5;
+}
+
+.btn-default{
+  margin:0px;
+}
+
+.entry-content {
+  padding-bottom: 0px;
+}
+
+p {
+  margin-bottom: 30px;
+  line-height:1.7em;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.github-box {
+  h5 {
+    word-wrap:break-word;font-family:helvetica,arial,sans-serif;font-weight:normal;font-size:16px;color:gray;margin:0;padding:10px;
+    //background:url('/images/github_icon.png') 7px center no-repeat;
+    width: auto;
+  }
+
+  h5 .repo {font-weight:bold}
+  //h5 .repo {display:block;word-wrap:break-word;}
+  margin-bottom: 25px;
+}
+
+input.form-control {
+border-radius: 0px;
+}

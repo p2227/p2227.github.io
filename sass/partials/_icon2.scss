@@ -1,0 +1,134 @@
+span.entypo-twitter {
+font-size: 15px;
+color: #fff;
+padding: 10px 20px;
+margin: 0px;
+background-color: #999999;
+position: absolute;
+overflow: hidden;
+}
+
+span.entypo-gplus {
+font-size: 15px;
+color: #fff;
+padding: 10px 20px;
+margin: 0px;
+background-color: #999999;
+position: absolute;
+overflow: hidden;
+}
+
+span.entypo-vkontakte {
+font-size: 15px;
+color: #fff;
+padding: 10px 20px;
+margin: 0px;
+background-color: #999999;
+position: absolute;
+overflow: hidden;
+}
+
+span.entypo-rss {
+font-size: 15px;
+color: #fff;
+padding: 10px 20px;
+margin: 0px;
+background-color: #999999;
+position: absolute;
+overflow: hidden;
+}
+
+//link
+a:hover {
+text-decoration: none;
+}
+
+span.entypo-twitter:hover {
+transition: all 0.3s;
+color: #66CCFF;
+}
+span.twitter-name:hover {
+opacity: 0.6;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition: 0.3s ease-in-out;
+-o-transition: 0.3s ease-in-out;
+transition: 0.3s ease-in-out;
+}
+
+span.entypo-gplus:hover {
+transition: all 0.3s;
+color: #CC3300;
+}
+span.googleplus-name:hover {
+opacity: 0.6;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition: 0.3s ease-in-out;
+-o-transition: 0.3s ease-in-out;
+transition: 0.3s ease-in-out;
+}
+
+span.entypo-vkontakte:hover {
+transition: all 0.3s;
+color: #3366CC;
+}
+span.hatena-name:hover {
+opacity: 0.6;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition: 0.3s ease-in-out;
+-o-transition: 0.3s ease-in-out;
+transition: 0.3s ease-in-out;
+}
+
+span.entypo-rss:hover {
+transition: all 0.3s;
+color: #339966;
+//color: #FF9933;
+}
+span.feedly-name:hover {
+opacity: 0.6;
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition: 0.3s ease-in-out;
+-o-transition: 0.3s ease-in-out;
+transition: 0.3s ease-in-out;
+}
+
+//title
+span.twitter-name {
+font-size: 15px;
+text-align:center;
+color: #fff;
+padding: 10px;
+margin: 5px 0px;
+background-color: #66CCFF;
+display:block;
+}
+
+span.googleplus-name {
+font-size: 15px;
+text-align:center;
+color: #fff;
+padding: 10px;
+margin: 5px 0px;
+background-color: #CC3300;
+display:block;
+}
+
+span.hatena-name {
+font-size: 15px;
+text-align:center;
+color: #fff;
+padding: 10px;
+margin: 5px 0px;
+background-color: #3366CC;
+display:block;
+}
+
+span.feedly-name {
+font-size: 15px;
+text-align:center;
+color: #fff;
+padding: 10px;
+margin: 5px 0px;
+background-color: #339966;
+display:block;
+}

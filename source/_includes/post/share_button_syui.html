@@ -1,0 +1,28 @@
+{% if site.share_button_syui %}
+<div class="share_button_syui">
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank"><span class="hatena-name">{% if site.share_button_hatena %}<span class="icon-hatena"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;"
+>B!</span>{% endif %} Bookmark </span></a>
+  <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title }}&via=syui__" target="_blank"><span class="twitter-name">{% if site.share_button_twitter %}<span class="icon-twitter"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} Tweet </span></a>
+  <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank"><span class="googleplus-name">{% if site.share_button_gplus %}<span class="icon-googleplus"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} +1 </span></a>
+  <a href="http://feedly.com/i/subscription/feed/{{ site.url }}{{ site.subscribe_rss }}" target="_blank"><span class="feedly-name">{% if site.share_button_rss %}<span class="icon-feed"
+style="float: left;
+font-size: 20px;
+padding-left: 5px;
+color: #fff;"
+></span>{% endif %} Feedly </span></a>
+</div>
+
+{% endif %}
