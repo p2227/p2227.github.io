@@ -11,8 +11,19 @@ noToc: true
       {% assign index = true %}
       {% for post in paginator.posts %}
       {% assign content = post.content %}
-        <article class="post" onclick="location.href=&#34;{{ root_url }}{{ post.url }}&#34;;" style="cursor: pointer;">
-          {% include article.html %}
+        <article class="post">
+          <header>
+            {{ post.date | date: "%Y-%m-%d" }} | 
+            <p class="meta text-muted text-uppercase">
+               <span class="meta_data_head">{% include post/date.html %}{{ time }}</span>
+                {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
+                 | <span class="disqus_head"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"
+                    data-disqus-identifier="{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">Comments</a></span>
+                {% endif %}
+              </p>
+            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          </header>
+          <div>{{ post.excerpt }}</div>
         </article>
       {% endfor %}
     </div>

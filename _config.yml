@@ -2,6 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
+encoding: utf-8
 url: http://gh.p2227.com
 title: p2227's Blog
 subtitle: F-E-DOM.
@@ -27,7 +28,7 @@ email:
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
+root: /git/p2227.github.io/public
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
@@ -53,6 +54,7 @@ titlecase: true       # Converts page and post titles to titlecase
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.

@@ -159,23 +159,3 @@ padding-top: 10px;
   line-height: 1.5em;
   display: inline-block;
 }
-
-article.post:hover {
-  background-color: #BFDCF5;
-  //opacity: 0.8;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  /* border-radius */
-  border-radius:1px;
-  -webkit-border-radius:1px;
-  -moz-border-radius:1px;
-
-  /* box-shadow */
-  box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
-  -webkit-box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
-  -moz-box-shadow:rgb(97, 165, 255) 0px 0px 3px 0px inset;
-}
-
