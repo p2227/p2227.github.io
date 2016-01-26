@@ -1,1 +1,4 @@
-今天进度，用了大概三个小时完成了vue+babel+webpack的hello world
+
+* 20160125 用了大概三个小时完成了vue+babel+webpack的hello world
+* 20160126 尝试用WEBPACK来构建应用，但是发现当引用到SQLITE3的模块时，因为上下文是NODE环境，有些模块不能引用（例如FS模块），所以今天主要是在NW中原始地刷新排错。应该可以配置WEBPACK的参数
+* 20160126 想利用RX去进行异步的数据流控制，在与SQLITE3结合的时候报错，先自己排查一下用法，最小化情景。
