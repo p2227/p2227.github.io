@@ -18,3 +18,4 @@ io.on('connection', function(socket){
 	io.to(roomid).emit( ) //服务端只往那个房间发送消息
 });
 ```
+* 20160410 理解了socket的原理之后，程序逻辑清晰，可以跑了，虽然很多bug。发现打包到手机用file协议也是可以用websocket进行通讯的。有空研究源代码。
