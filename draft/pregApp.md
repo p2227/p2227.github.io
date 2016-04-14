@@ -19,3 +19,4 @@ io.on('connection', function(socket){
 });
 ```
 * 20160410 理解了socket的原理之后，程序逻辑清晰，可以跑了，虽然很多bug。发现打包到手机用file协议也是可以用websocket进行通讯的。有空研究源代码。
+* 20160414 处理了聊天消息显示的部分，感觉到IM软件跟以前做的CRM-like系统的数据处理差别
