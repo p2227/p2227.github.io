@@ -2,5 +2,3 @@
 
 本repo主要拿来索引、存档、存放图片等资源文件
 
-- [2015年技术总结](//github.com/p2227/p2227.github.io/issues/2)
-
