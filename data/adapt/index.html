@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	
+	.retina{
+		width:150px;
+	}
+	
+	.retina2{
+		width:149px;
+	}
+
+	.login{
+		margin:0 auto;
+		padding:0.5em;
+		width:300px;
+		border:1px solid red;
+	}
+		
+	.login p{
+		line-height:2;
+	}
+	
+	.login input{
+		width:200px;
+	}
+	
+	.login label{
+		max-width:5em;
+	}
+	
+	.flexible.login{
+		width:80vw;
+		border:1px solid red;
+	}
+	
+	.box{
+		display:flex;
+		align-items: center;
+	}	
+	
+	.box>input{
+		flex:1;
+	}
+</style>
+</head>
+<body>
+    <img class="retina" src="unnamed.png" alt="1:1比例"/>
+    <img class="retina" src="unnamed@2x.png" alt="高清图"/>	<hr/>
+    <img class="retina2" src="people.png" alt="1:1比例"/>
+    <img class="retina2" src="people@2x.png" alt="高清图"/>	
+    <img src="Avatar4.svg" alt="矢量图"/>	
+	<div style="width:1px;height:1px;margin:0;padding:0;background:red"></div>	
+	<p>Iphone 6下，两个登录框的效果就会一样，其他手机都会有差别</p>
+	<div class="login">
+		<form method="post">
+			<p><label for="normal-tel">手机号：</label><input type="tel" name="tel" id="normal-tel" placeholder="请输入手机号"/></p>
+			<p><label for="normal-password">密　码：</label><input type="password" id="normal-password" name="password" placeholder="请输入密码"/></p>
+			<button>提交</button>
+		</form>
+	</div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>	
+	<div class="flexible login">
+		<form method="post">
+			<p class="box"><label for="flex-tel">手机号：</label><input type="tel" id="flex-tel" name="tel" placeholder="请输入手机号"/></p>
+			<p class="box"><label for="flex-password">密　码：</label><input type="password" id="flex-password"  name="password" placeholder="请输入密码"/></p>
+			<button>提交</button>
+		</form>
+	</div>
+</body>
+</html>
